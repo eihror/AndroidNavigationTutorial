@@ -1,16 +1,18 @@
-package com.eihror.androidnavigation
+package com.eihror.androidnavigation.register
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
-import kotlinx.android.synthetic.main.fragment_login.*
+import com.eihror.androidnavigation.R
+import kotlinx.android.synthetic.main.fragment_register_password.*
 
-class LoginFragment : Fragment(R.layout.fragment_login) {
+class RegisterPasswordFragment : Fragment(R.layout.fragment_register_password) {
 
     private lateinit var navController: NavController
-    private val buttonHome get() = button_go_to_home
+
+    private val buttonNext get() = button_next
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -20,8 +22,9 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
     }
 
     private fun setupActions() {
-        buttonHome.setOnClickListener {
-            val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()
+        buttonNext.setOnClickListener {
+            val action =
+                RegisterPasswordFragmentDirections.actionRegisterPasswordFragmentToRegisterCodeFragment()
             navController.navigate(action)
         }
     }

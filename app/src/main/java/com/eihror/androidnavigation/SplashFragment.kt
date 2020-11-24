@@ -21,7 +21,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
         super.onResume()
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val action = SplashFragmentDirections.actionSplashScreenFragmentToLoginFragment()
+            val action = SplashFragmentDirections.actionSplashScreenFragmentToAuthFragment()
             navController.navigate(action)
         }, 3000)
     }
