@@ -3,7 +3,7 @@ package com.eihror.androidnavigation
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.eihror.androidnavigation.util.FlowType
 import kotlinx.android.synthetic.main.fragment_authentication_flow.*
@@ -28,7 +28,7 @@ class AuthenticationFlowFragment : Fragment(R.layout.fragment_authentication_flo
     }
 
     private fun setupNavControllers() {
-        mainNavController = requireActivity().findNavController(R.id.nav_host_fragment_container)
+        mainNavController = findNavController()
         authenticationFlowNavController = Navigation.findNavController(authenticationContainer)
     }
 

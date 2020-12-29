@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.eihror.dialognavigation.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_topDialogFragment"
+            app:destination="@id/topDialogFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_leftDialogFragment"
+            app:destination="@id/leftDialogFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_rightDialogFragment"
+            app:destination="@id/rightDialogFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_bottomDialogFragment"
+            app:destination="@id/bottomDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/topDialogFragment"
+        android:name="com.eihror.dialognavigation.dialog.TopDialogFragment"
+        android:label="dialog_top"
+        tools:layout="@layout/dialog_top" />
+    <dialog
+        android:id="@+id/leftDialogFragment"
+        android:name="com.eihror.dialognavigation.dialog.LeftDialogFragment"
+        android:label="dialog_left"
+        tools:layout="@layout/dialog_left" />
+    <dialog
+        android:id="@+id/rightDialogFragment"
+        android:name="com.eihror.dialognavigation.dialog.RightDialogFragment"
+        android:label="dialog_right"
+        tools:layout="@layout/dialog_right" />
+    <dialog
+        android:id="@+id/bottomDialogFragment"
+        android:name="com.eihror.dialognavigation.dialog.BottomDialogFragment"
+        android:label="dialog_bottom"
+        tools:layout="@layout/dialog_bottom" />
+</navigation>

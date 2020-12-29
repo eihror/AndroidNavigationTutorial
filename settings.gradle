@@ -1,2 +1,3 @@
-include ':app'
+include ':dialognavigation'
+include ':nestednavigation'
 rootProject.name = "Android Navigation"
